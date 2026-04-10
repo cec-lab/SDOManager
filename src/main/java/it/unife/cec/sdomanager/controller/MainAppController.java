@@ -904,65 +904,65 @@ public class MainAppController {
         
         // LISTENER PER MODIFICA CAMPI SDO
          revCode.textProperty().addListener((obs, oldVal, newVal) -> {
-            formDirty.set(true);
+             if (selectedSdo != null) formDirty.set(true);
             //checkDirty(selectedSdo);
          });
          
          validation_type.textProperty().addListener((obs, oldVal, newVal) -> {
-            formDirty.set(true);
+            if (selectedSdo != null) formDirty.set(true);
             //checkDirty(selectedSdo);
          });
          
          COD_PAT1_code_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             formDirty.set(true);
+             if (selectedSdo != null) formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol2_code_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             formDirty.set(true);
+             if (selectedSdo != null) formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol3_code_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             formDirty.set(true);
+             if (selectedSdo != null) formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol4_code_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             formDirty.set(true);
+             if (selectedSdo != null) formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol5_code_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             formDirty.set(true);
+            if (selectedSdo != null) formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol6_code_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             formDirty.set(true);
+             if (selectedSdo != null) formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          COD_PAT1_label_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             formDirty.set(true);
+             if (selectedSdo != null) formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol2_label_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             formDirty.set(true);
+             if (selectedSdo != null) formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol3_label_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             formDirty.set(true);
+             if (selectedSdo != null) formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol4_label_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             formDirty.set(true);
+             if (selectedSdo != null) formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol5_label_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             formDirty.set(true);
+             if (selectedSdo != null) formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol6_label_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             formDirty.set(true);
+             if (selectedSdo != null) formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          note.textProperty().addListener((obs, oldVal, newVal) -> {
-             formDirty.set(true);
+             if (selectedSdo != null) formDirty.set(true);
              //checkDirty(selectedSdo);
          });
 
