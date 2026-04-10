@@ -904,72 +904,64 @@ public class MainAppController {
         
         // LISTENER PER MODIFICA CAMPI SDO
          revCode.textProperty().addListener((obs, oldVal, newVal) -> {
-            System.out.println("revcode event listener");
             formDirty.set(true);
             //checkDirty(selectedSdo);
          });
+         
+         validation_type.textProperty().addListener((obs, oldVal, newVal) -> {
+            formDirty.set(true);
+            //checkDirty(selectedSdo);
+         });
+         
          COD_PAT1_code_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             System.out.println("revcode event listener");
              formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol2_code_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             System.out.println("revcode event listener");
              formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol3_code_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             System.out.println("revcode event listener");
              formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol4_code_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             System.out.println("revcode event listener");
              formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol5_code_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             System.out.println("revcode event listener");
              formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol6_code_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             System.out.println("revcode event listener");
              formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          COD_PAT1_label_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             System.out.println("revcode event listener");
              formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol2_label_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             System.out.println("revcode event listener");
              formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol3_label_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             System.out.println("revcode event listener");
              formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol4_label_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             System.out.println("revcode event listener");
              formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol5_label_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             System.out.println("revcode event listener");
              formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          patol6_label_icd10.textProperty().addListener((obs, oldVal, newVal) -> {
-             System.out.println("revcode event listener");
              formDirty.set(true);
              //checkDirty(selectedSdo);
          });
          note.textProperty().addListener((obs, oldVal, newVal) -> {
-             System.out.println("revcode event listener");
              formDirty.set(true);
              //checkDirty(selectedSdo);
          });
@@ -997,8 +989,6 @@ public class MainAppController {
         // PREVIENE PERDITA DATI SU CAMBIO RECORD DA TABELLA SDO
         
         tableSdo.addEventFilter(MouseEvent.MOUSE_PRESSED, event -> {
-            System.out.println("Table SDO mouse event pressed");
-            System.out.println("Form dirty: " + isSdoFormDirty());
             if (isSdoFormDirty()) {
                 boolean conferma = DialogsPopUp.warnPopUp("Attenzione", "Salvare i dati prima di cambiare caso."
                             );
@@ -1020,7 +1010,6 @@ public class MainAppController {
         Sdo selectedItem = tableSdo.getSelectionModel().getSelectedItem();
         
         if (selectedItem == null) {
-            System.out.println("Nessuna riga selezionata");
             spinner.setVisible(false);
             lblStatus.setText("SDO Manager 1.0");
             return;

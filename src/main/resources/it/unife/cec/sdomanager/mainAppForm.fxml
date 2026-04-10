@@ -103,7 +103,7 @@
 
                                         <TextField fx:id="id_sdo" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                         <TextField fx:id="cedap_linked" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                        <TextField fx:id="validation_type" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" >
+                                        <TextField fx:id="validation_type" editable="true" GridPane.columnIndex="1" GridPane.rowIndex="3" >
                                             <tooltip>
                                                 <Tooltip text="1: Chirurgia &#10;2: Predefiniti &#10;3: CedAP &#10;4: SDO multiple" />
                                             </tooltip>
@@ -223,16 +223,16 @@
                                         <!-- COD INT -->
                                         <Label style="-fx-font-weight: bold;" text="INTERVENTO" GridPane.columnIndex="0" GridPane.rowIndex="0" />
                                         <Label text="Interv1" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                                        <Label text="Interv1" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                                        <Label text="Interv1" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                                        <Label text="Interv1" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-                                        <Label text="Interv1" GridPane.columnIndex="0" GridPane.rowIndex="5" />
-                                        <Label text="Interv1" GridPane.columnIndex="0" GridPane.rowIndex="6" />
-                                        <Label text="Interv1" GridPane.columnIndex="0" GridPane.rowIndex="7" />
-                                        <Label text="Interv1" GridPane.columnIndex="0" GridPane.rowIndex="8" />
-                                        <Label text="Interv1" GridPane.columnIndex="0" GridPane.rowIndex="9" />
-                                        <Label text="Interv1" GridPane.columnIndex="0" GridPane.rowIndex="10" />
-                                        <Label text="Interv1" GridPane.columnIndex="0" GridPane.rowIndex="11" />
+                                        <Label text="Interv2" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                                        <Label text="Interv3" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                                        <Label text="Interv4" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                                        <Label text="Interv5" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                                        <Label text="Interv6" GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                                        <Label text="Interv7" GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                                        <Label text="Interv8" GridPane.columnIndex="0" GridPane.rowIndex="8" />
+                                        <Label text="Interv9" GridPane.columnIndex="0" GridPane.rowIndex="9" />
+                                        <Label text="Interv10" GridPane.columnIndex="0" GridPane.rowIndex="10" />
+                                        <Label text="Interv11" GridPane.columnIndex="0" GridPane.rowIndex="11" />
                                         
                                         <TextField fx:id="interv1" editable="false" minWidth="50.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />   
                                         <TextField fx:id="interv2" editable="false" minWidth="50.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />   
