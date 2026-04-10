@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>it.unife.cec</groupId>
     <artifactId>SDOManager</artifactId>
-    <version>1.0.3</version>
+    <version>1.0.4</version>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>11</maven.compiler.source>
@@ -163,7 +163,7 @@
                     <name>SDOManager</name>
 
                     <!-- Versione -->
-                    <appVersion>1.0.3</appVersion>
+                    <appVersion>1.0.4</appVersion>
                     
                     <!-- Vendor -->
                     <vendor>Marco Manfrini - CEC Università di Ferrara</vendor>

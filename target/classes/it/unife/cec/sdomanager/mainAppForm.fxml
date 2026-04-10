@@ -108,7 +108,7 @@
                                                 <Tooltip text="1: Chirurgia &#10;2: Predefiniti &#10;3: CedAP &#10;4: SDO multiple" />
                                             </tooltip>
                                         </TextField>
-                                        <TextField fx:id="revCode" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                        <TextField fx:id="revcode" GridPane.columnIndex="1" GridPane.rowIndex="4">
                                             <tooltip>
                                                 <Tooltip text="0: scartato &#10;1: modificato &#10;2: accettato &#10;9: non revisionato" />
                                             </tooltip>

@@ -267,7 +267,7 @@ public class MainAppController {
 
     // SDO FORM
     @FXML private TextField id_sdo;
-    @FXML private TextField revCode;
+    @FXML private TextField revcode;
     @FXML private TextField cedap_linked;
 //    @FXML private TextField COD_RG;
 //    @FXML private TextField COD_PRES;
@@ -903,7 +903,7 @@ public class MainAppController {
             );
         
         // LISTENER PER MODIFICA CAMPI SDO
-         revCode.textProperty().addListener((obs, oldVal, newVal) -> {
+         revcode.textProperty().addListener((obs, oldVal, newVal) -> {
              if (selectedSdo != null) formDirty.set(true);
             //checkDirty(selectedSdo);
          });
@@ -1036,7 +1036,7 @@ public class MainAppController {
                     lblStatus.setText("SDO Manager 1.0");
                     loadAllSdo();
                     formDirty.set(false);
-                    saveButton.setDisable(true);
+                    //saveButton.setDisable(true);
                 });
         
         task.setOnFailed(e -> {
@@ -1178,31 +1178,39 @@ public class MainAppController {
     private void exportSdoCsv() throws IOException {
         
         System.out.println("export clicked");
+        
+        if (isSdoFormDirty()) {
+                boolean conferma = DialogsPopUp.warnPopUp("Attenzione", "Salvare i dati prima di esportare il file.");
+                if (conferma) {
+                    return;
+                } 
+            } else {
+            
+                FileChooser fileChooser = new FileChooser();
+                fileChooser.setTitle("Salva file CSV");
 
-        FileChooser fileChooser = new FileChooser();
-        fileChooser.setTitle("Salva file CSV");
+                fileChooser.getExtensionFilters().add(
+                        new FileChooser.ExtensionFilter("File CSV", "*.csv")
+                );
 
-        fileChooser.getExtensionFilters().add(
-                new FileChooser.ExtensionFilter("File CSV", "*.csv")
-        );
+                fileChooser.setInitialFileName("sdo_export.csv");
 
-        fileChooser.setInitialFileName("sdo_export.csv");
+                File file = fileChooser.showSaveDialog(new Stage());
 
-        File file = fileChooser.showSaveDialog(new Stage());
+                if (file != null) {
 
-        if (file != null) {
-
-            try {
-                CsvSdoService.exportCsv(file.toString());
-                System.out.println("File salvato: " + file.getAbsolutePath());
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setTitle("Info");
-                alert.setHeaderText("SDO export");
-                alert.setContentText("File salvato correttamente.");
-                alert.showAndWait();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
+                    try {
+                        CsvSdoService.exportCsv(file.toString());
+                        System.out.println("File salvato: " + file.getAbsolutePath());
+                        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                        alert.setTitle("Info");
+                        alert.setHeaderText("SDO export");
+                        alert.setContentText("File salvato correttamente.");
+                        alert.showAndWait();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
         }
 }
     

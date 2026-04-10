@@ -13,7 +13,7 @@ import javafx.beans.property.*;
 public class Sdo {
 
     public IntegerProperty id_sdo = new SimpleIntegerProperty();
-    public StringProperty revCode = new SimpleStringProperty();
+    public StringProperty revcode = new SimpleStringProperty();
     public StringProperty cedap_linked = new SimpleStringProperty();
     public StringProperty COD_RG = new SimpleStringProperty();
     public StringProperty COD_PRES = new SimpleStringProperty();
@@ -162,11 +162,11 @@ public class Sdo {
     }
 
     public StringProperty getRevCode() {
-        return revCode;
+        return revcode;
     }
 
-    public void setRevCode(StringProperty revCode) {
-        this.revCode = revCode;
+    public void setRevCode(StringProperty revcode) {
+        this.revcode = revcode;
     }
 
     public StringProperty getCedap_linked() {

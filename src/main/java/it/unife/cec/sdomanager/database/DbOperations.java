@@ -30,7 +30,6 @@ public class DbOperations {
         
     String sql = "CREATE TABLE IF NOT EXISTS sdo ("
                 + "id_sdo INTEGER PRIMARY KEY AUTOINCREMENT,"
-                + "revCode TEXT DEFAULT 9,"
                 + "cedap_linked TEXT,"
                 + "COD_RG TEXT,"
                 + "COD_PRES TEXT,"
@@ -162,6 +161,7 @@ public class DbOperations {
                 + "patol5_label_icd10 TEXT,"
                 + "patol6_label_icd10 TEXT,"
                 + "alreadyRecorded TEXT,"
+                + "revcode TEXT DEFAULT '9',"
                 + "note TEXT"
             +")";
 
