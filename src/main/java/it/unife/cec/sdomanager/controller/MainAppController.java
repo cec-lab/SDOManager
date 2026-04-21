@@ -1139,15 +1139,17 @@ public class MainAppController {
                 Task<Void> task = new Task<>() {
                     @Override
                     protected Void call() throws Exception {
-                        try {
+                        //try {
 
                             numberOfRecords = CsvSdoService.importCsv(file);
                         
-                        } catch (Exception e) {
+                        //} 
+                        
+                        //catch (Exception e) {
 
-                            e.printStackTrace();
+                        //    e.printStackTrace();
                             
-                        }    
+                        //}    
                             return null;
                     }
                 };
@@ -1164,6 +1166,12 @@ public class MainAppController {
                 });
 
                 task.setOnFailed(e -> {
+                    Alert alert = new Alert(Alert.AlertType.ERROR);
+                    alert.setTitle("Errore");
+                    alert.setHeaderText("SDO import: operazione non riuscita");
+                    alert.setContentText("Errore database (nomi campi?): " + e.getClass().getName());
+                    alert.showAndWait();
+                    System.err.println( e.getClass().getName());
                     spinner.setVisible(false);
                     lblStatus.setText("SDO Manager 1.0");
                 });

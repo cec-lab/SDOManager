@@ -106,6 +106,12 @@ public class CsvSdoService {
             } 
         } catch (Exception e) {
                 System.err.println( e.getClass().getName() + ": " + e.getMessage() );
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Errore");
+                alert.setHeaderText("SDO import: operazione non riuscita");
+                alert.setContentText(e.getClass().getName() + ": " + e.getMessage());
+                alert.showAndWait();
+                System.err.println( e.getClass().getName() + ": " + e.getMessage() );
                 numberOfRecords = 0;
         }
         return numberOfRecords;

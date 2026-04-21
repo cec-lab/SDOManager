@@ -115,6 +115,10 @@ public class Sdo {
     public StringProperty TITOLO_DI_STUDIO_PADRE = new SimpleStringProperty();
     public StringProperty CONDIZIONE_PROF_MADRE = new SimpleStringProperty();
     public StringProperty TITOLO_DI_STUDIO_MADRE = new SimpleStringProperty();
+    public StringProperty NUMERO_ABORTI_SPONTANEI = new SimpleStringProperty();
+    public StringProperty NUMERO_IVG = new SimpleStringProperty();
+    public StringProperty NUMERO_NATI_VIVI = new SimpleStringProperty();
+    public StringProperty NUMERO_NATI_MORTI = new SimpleStringProperty();
     public StringProperty COD_PAT1_label = new SimpleStringProperty();
     public StringProperty patol2_label = new SimpleStringProperty();
     public StringProperty patol3_label = new SimpleStringProperty();
@@ -144,7 +148,7 @@ public class Sdo {
     public StringProperty patol4_label_icd10 = new SimpleStringProperty();
     public StringProperty patol5_label_icd10 = new SimpleStringProperty();
     public StringProperty patol6_label_icd10 = new SimpleStringProperty();
-    public StringProperty alreadyRecorded = new SimpleStringProperty();
+    public StringProperty alreadyRecorded_PROG_PAZ = new SimpleStringProperty();
     public StringProperty note = new SimpleStringProperty();
 
     
@@ -1209,22 +1213,16 @@ public class Sdo {
     public void setPatol6_label_icd10(StringProperty patol6_label_icd10) {
         this.patol6_label_icd10 = patol6_label_icd10;
     }
-
-    public StringProperty getAlreadyRecorded() {
-        return alreadyRecorded;
-    }
-
-    public void setAlreadyRecorded(StringProperty alreadyRecorded) {
-        this.alreadyRecorded = alreadyRecorded;
-    }
     
     public StringProperty getNote() {
-        return alreadyRecorded;
+        return alreadyRecorded_PROG_PAZ;
     }
 
     public void setNote(StringProperty note) {
-        this.alreadyRecorded = note;
+        this.note = note;
     }
+    
+    
 
 //    public Sdo (int id, String nome, String cognome,
 //                   String dataNascita, double peso, String classeBmi) {
@@ -1236,6 +1234,62 @@ public class Sdo {
 //        this.peso.set(peso);
 //        this.classeBmi.set(classeBmi);
 //    }
+
+    public IntegerProperty getId_sdo() {
+        return id_sdo;
+    }
+
+    public void setId_sdo(IntegerProperty id_sdo) {
+        this.id_sdo = id_sdo;
+    }
+
+    public StringProperty getRevcode() {
+        return revcode;
+    }
+
+    public void setRevcode(StringProperty revcode) {
+        this.revcode = revcode;
+    }
+
+    public StringProperty getNUMERO_ABORTI_SPONTANEI() {
+        return NUMERO_ABORTI_SPONTANEI;
+    }
+
+    public void setNUMERO_ABORTI_SPONTANEI(StringProperty NUMERO_ABORTI_SPONTANEI) {
+        this.NUMERO_ABORTI_SPONTANEI = NUMERO_ABORTI_SPONTANEI;
+    }
+
+    public StringProperty getNUMERO_IVG() {
+        return NUMERO_IVG;
+    }
+
+    public void setNUMERO_IVG(StringProperty NUMERO_IVG) {
+        this.NUMERO_IVG = NUMERO_IVG;
+    }
+
+    public StringProperty getNUMERO_NATI_VIVI() {
+        return NUMERO_NATI_VIVI;
+    }
+
+    public void setNUMERO_NATI_VIVI(StringProperty NUMERO_NATI_VIVI) {
+        this.NUMERO_NATI_VIVI = NUMERO_NATI_VIVI;
+    }
+
+    public StringProperty getNUMERO_NATI_MORTI() {
+        return NUMERO_NATI_MORTI;
+    }
+
+    public void setNUMERO_NATI_MORTI(StringProperty NUMERO_NATI_MORTI) {
+        this.NUMERO_NATI_MORTI = NUMERO_NATI_MORTI;
+    }
+
+    public StringProperty getAlreadyRecorded_PROG_PAZ() {
+        return alreadyRecorded_PROG_PAZ;
+    }
+
+    public void setAlreadyRecorded_PROG_PAZ(StringProperty alreadyRecorded_PROG_PAZ) {
+        this.alreadyRecorded_PROG_PAZ = alreadyRecorded_PROG_PAZ;
+    }
 
 
    
