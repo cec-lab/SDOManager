@@ -296,7 +296,7 @@ public class MainAppController {
 //    @FXML private TextField RG_RES;
 @FXML private TextField SEX;
 //    @FXML private TextField SUB_COD;
-//    @FXML private TextField PROG_PAZ;
+@FXML private TextField PROG_PAZ;
 @FXML private TextField patol2;
 @FXML private TextField patol3;
 @FXML private TextField patol4;
@@ -327,7 +327,7 @@ public class MainAppController {
 //    @FXML private TextField malformazione_tipo;
 //    @FXML private TextField score;
 @FXML private TextField sds_cc;
-//    @FXML private TextField COD_STAB;
+@FXML private TextField COD_STAB;
 //    @FXML private TextField SDO_MADRE;
 //    @FXML private TextField SDO_NEO;
 //    @FXML private TextField prog_paz_m;
@@ -1009,6 +1009,8 @@ public class MainAppController {
         
         Sdo selectedItem = tableSdo.getSelectionModel().getSelectedItem();
         
+        System.out.println("updateSdo.selectedItem: " + selectedItem.getId());
+        
         if (selectedItem == null) {
             spinner.setVisible(false);
             lblStatus.setText("SDO Manager 1.0");
@@ -1034,7 +1036,8 @@ public class MainAppController {
                     System.out.println("Update completato");
                     spinner.setVisible(false);
                     lblStatus.setText("SDO Manager 1.0");
-                    loadAllSdo();
+                    tableSdo.refresh();
+                    //loadAllSdo();
                     formDirty.set(false);
                     //saveButton.setDisable(true);
                 });
@@ -1113,6 +1116,7 @@ public class MainAppController {
     
     @FXML
     private void importSdoCsv() throws IOException {
+        
         
         if (DialogsPopUp.confirmPopUp("Conferma", "Verranno cancellati i dati presenti.")) {
             
